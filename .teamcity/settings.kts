@@ -41,7 +41,7 @@ object EmptyTmp : GitVcsRoot({
     }
 })
 
-object GH-main : GitVcsRoot({
+object GHmain : GitVcsRoot({
     name = "GH-main"
     url = "https://github.com/daimLiat/simple-JUnit.git"
     branch = "dslBranch1"
