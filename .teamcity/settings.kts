@@ -1,5 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -28,24 +28,7 @@ version = "2022.10"
 project {
 
     vcsRoot(GHmain)
-    buildType(BuildConf)
-
 }
-
-object BuildConf : BuildType({
-    name = "build conf"
-
-    vcs {
-        root(GHmain)
-    }
-
-    steps {
-        maven {
-            name = "mvn test"
-            goals = "clean test"
-        }
-    }
-})
 
 object GHmain : GitVcsRoot({
     name = "GH-main"
