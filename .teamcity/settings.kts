@@ -29,8 +29,8 @@ version = "2022.10"
 project {
 
     vcsRoot(GHmain)
-    vcsRoot(TempEmpty)
-    vcsRoot(TempTt)
+//    vcsRoot(TempEmpty)
+//    vcsRoot(TempTt)
 
     buildType(BuildConf)
 }
@@ -50,25 +50,25 @@ object BuildConf : BuildType({
     }
 })
 
-object TempEmpty : GitVcsRoot({
-    name = "temp_Empty"
-    url = "https://github.com/daimLiat/generic-empty.git"
-    branch = "main"
-    authMethod = password {
-        userName = "daimliat"
-        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
-    }
-})
-
-object TempTt : GitVcsRoot({
-    name = "temp_TT"
-    url = "https://github.com/daimLiat/test-task.git"
-    branch = "main"
-    authMethod = password {
-        userName = "daimliat"
-        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
-    }
-})
+//object TempEmpty : GitVcsRoot({
+//    name = "temp_Empty"
+//    url = "https://github.com/daimLiat/generic-empty.git"
+//    branch = "main"
+//    authMethod = password {
+//        userName = "daimliat"
+//        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
+//    }
+//})
+//
+//object TempTt : GitVcsRoot({
+//    name = "temp_TT"
+//    url = "https://github.com/daimLiat/test-task.git"
+//    branch = "main"
+//    authMethod = password {
+//        userName = "daimliat"
+//        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
+//    }
+//})
 
 object GHmain : GitVcsRoot({
     name = "GH-main"
