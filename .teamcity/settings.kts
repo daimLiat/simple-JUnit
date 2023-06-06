@@ -28,7 +28,7 @@ version = "2022.10"
 project {
 
 //    vcsRoot(EmptyTmp)
-    vcsRoot(GH-main)
+    vcsRoot(GHmain)
 }
 
 object EmptyTmp : GitVcsRoot({
