@@ -27,8 +27,8 @@ version = "2022.10"
 
 project {
 
-    vcsRoot(EmptyTmp)
-    vcsRoot(TtTmp)
+//    vcsRoot(EmptyTmp)
+    vcsRoot(GH-main)
 }
 
 object EmptyTmp : GitVcsRoot({
@@ -41,10 +41,10 @@ object EmptyTmp : GitVcsRoot({
     }
 })
 
-object TtTmp : GitVcsRoot({
-    name = "TT tmp"
-    url = "https://github.com/daimLiat/test-task.git"
-    branch = "main"
+object GH-main : GitVcsRoot({
+    name = "GH-main"
+    url = "https://github.com/daimLiat/simple-JUnit.git"
+    branch = "dslBranch1"
     authMethod = password {
         userName = "daimliat"
         password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
