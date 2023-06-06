@@ -66,6 +66,7 @@ object TempTt : GitVcsRoot({
     name = "temp_TestTask"
     url = "https://github.com/daimLiat/test-task.git"
     branch = "${DslContext.getParameter("branch")}"
+    branchSpec = "refs/heads/*"
     authMethod = password {
         userName = "daimliat"
         password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
