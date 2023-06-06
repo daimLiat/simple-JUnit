@@ -33,7 +33,15 @@ project {
 //    vcsRoot(TempTt)
 
     buildType(BuildConf)
+
+    params {
+        add {
+            param("branch", "dslBranch1")
+        }
+    }
 }
+
+
 
 object BuildConf : BuildType({
     name = "build conf"
