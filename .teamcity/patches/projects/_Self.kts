@@ -12,7 +12,7 @@ accordingly, and delete the patch script.
 changeProject(DslContext.projectId) {
     params {
         add {
-            param("branch", "")
+            param("branch", "dslBranch1")
         }
     }
 }
