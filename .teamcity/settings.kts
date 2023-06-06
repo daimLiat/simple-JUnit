@@ -29,7 +29,6 @@ version = "2022.10"
 project {
 
     vcsRoot(GHmain)
-    vcsRoot(TempEmpty)
     vcsRoot(TempTt)
 
     buildType(BuildConf)
