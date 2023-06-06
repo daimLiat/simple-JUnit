@@ -27,14 +27,16 @@ version = "2022.10"
 
 project {
 
+    vcsRoot(GHmain)
     buildType(BuildConf)
+
 }
 
 object BuildConf : BuildType({
     name = "build conf"
 
     vcs {
-        root(DslContext.settingsRoot)
+        root(GHmain)
     }
 
     steps {
@@ -42,5 +44,15 @@ object BuildConf : BuildType({
             name = "mvn test"
             goals = "clean test"
         }
+    }
+})
+
+object GHmain : GitVcsRoot({
+    name = "GH-main"
+    url = "https://github.com/daimLiat/simple-JUnit.git"
+    branch = "${DslContext.getParameter("branch")}"
+    authMethod = password {
+        userName = "daimliat"
+        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
     }
 })
