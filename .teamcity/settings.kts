@@ -77,7 +77,7 @@ object TempEmpty : GitVcsRoot({
 object TempTt : GitVcsRoot({
     name = "${DslContext.getParameter("secondRootNamed")}"
     url = "https://github.com/daimLiat/test-task.git"
-    branch = "main"
+    branch = "${DslContext.getParameter("branch")}"
     authMethod = password {
         userName = "daimliat"
         password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
