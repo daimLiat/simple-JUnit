@@ -33,10 +33,6 @@ project {
     vcsRoot(TempTt)
 
     buildType(BuildConf)
-
-    params {
-        param("branch", "dslBranch1")
-    }
 }
 
 
@@ -59,7 +55,7 @@ object BuildConf : BuildType({
 object GHmain : GitVcsRoot({
     name = "GH-main"
     url = "https://github.com/daimLiat/simple-JUnit.git"
-    branch = "%branch%"
+    branch = "dslBranch1"
 //    branch = "${DslContext.getParameter("branch")}"
     branchSpec = "refs/heads/*"
     authMethod = password {
