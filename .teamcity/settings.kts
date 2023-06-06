@@ -34,9 +34,9 @@ project {
 
     buildType(BuildConf)
 
-//    params {
-//        param("branch", "dslBranch1")
-//    }
+    params {
+        param("branch", "dslBranch1")
+    }
 }
 
 
