@@ -50,6 +50,17 @@ object BuildConf : BuildType({
     }
 })
 
+object GHmain : GitVcsRoot({
+    name = "GH-main"
+    url = "https://github.com/daimLiat/simple-JUnit.git"
+//    branch = "dslBranch1"
+    branch = "${DslContext.getParameter("branch")}"
+    authMethod = password {
+        userName = "daimliat"
+        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
+    }
+})
+
 //object TempEmpty : GitVcsRoot({
 //    name = "temp_Empty"
 //    url = "https://github.com/daimLiat/generic-empty.git"
@@ -69,15 +80,4 @@ object BuildConf : BuildType({
 //        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
 //    }
 //})
-
-object GHmain : GitVcsRoot({
-    name = "GH-main"
-    url = "https://github.com/daimLiat/simple-JUnit.git"
-    branch = "dslBranch1"
-//    branch = "${DslContext.getParameter("branch")}"
-    authMethod = password {
-        userName = "daimliat"
-        password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
-    }
-})
 
