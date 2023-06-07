@@ -72,4 +72,3 @@ object TempTt : GitVcsRoot({
         password = "credentialsJSON:e7a5d319-8444-4a52-8646-e138f18e407f"
     }
 })
-
