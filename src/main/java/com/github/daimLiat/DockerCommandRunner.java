@@ -10,7 +10,7 @@ public class DockerCommandRunner {
         try {
             // Create ProcessBuilder for the Docker command
             ProcessBuilder processBuilder = new ProcessBuilder();
-            processBuilder.command("docker", "run", "hello-world");
+            processBuilder.command("docker", "run", "--rm", "hello-world");
 
             // Start the process
             Process process = processBuilder.start();
