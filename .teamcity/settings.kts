@@ -45,16 +45,32 @@ object BuildsForCleanup : BuildType({
         }
     }
 
+//    cleanup {
+//        keepRule {
+//            id = "KEEP_RULE_2"
+//            keepAtLeast = days(30) {
+//                since = lastBuild()
+//            }
+//            dataToKeep = historyAndStatistics()
+//        }
+//        baseRule {
+//            all(builds = 1)
+//        }
+//    }
+
     cleanup {
         keepRule {
             id = "KEEP_RULE_2"
-            keepAtLeast = days(30) {
-                since = lastBuild()
+            dataToKeep = historyAndStatistics {
+                preserveLogs = false
+                keepAtLeast = days(30) {
+                    since = lastBuild()
+                }
             }
-            dataToKeep = historyAndStatistics()
         }
         baseRule {
             all(builds = 1)
         }
     }
+
 })
