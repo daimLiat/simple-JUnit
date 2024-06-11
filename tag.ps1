@@ -1,1 +1,0 @@
-Write-Host ##teamcity[addBuildTag 'PowahShell']
