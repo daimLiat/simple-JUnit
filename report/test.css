@@ -1,0 +1,45 @@
+/* Apply styles to the entire table */
+table {
+  border-collapse: collapse;
+  border: 2px solid #f1f1f1;
+  table-layout: auto;
+  max-width: 100%;
+}
+
+/* Style for table container */
+.table-container {
+  max-height: 300px; /* Adjust the height as needed */
+  max-width: 100%; /* Set the table container to be 100% wide */
+}
+
+/* Style for table header cells */
+th:nth-child(n) {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Style for even rows in the table body */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Style for odd rows in the table body */
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Style for table data cells */
+td:nth-child(n) {
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  padding: 8px;
+  white-space: normal; /* Allow content to wrap */
+}
+
+/* Style to remove borders and padding for the empty cells */
+td:empty {
+  border: none;
+  padding: 0;
+}
